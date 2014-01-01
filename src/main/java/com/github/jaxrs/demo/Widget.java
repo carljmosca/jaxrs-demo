@@ -6,17 +6,24 @@
 
 package com.github.jaxrs.demo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author moscac
  */
-public class Widget {
+public class Widget implements Serializable {
     
     private int id;
     private String description;
     
     public Widget() {
         
+    }
+    
+    public Widget(int id, String description) {
+        this.id = id;
+        this.description = description;
     }
 
     public int getId() {
